@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--? Bootstrap Css -->
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <!--? Style Css -->
+    <link rel="stylesheet" href="./style.css">
+    <!--? Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+
+<body>
+    <!--! ================= NAVBAR ================= -->
+
+    <nav class="navbar bg-white border-bottom">
+
+        <div class="container">
+
+            <!-- ! Logo -->
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2">
+
+                <div class="brand-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <div>
+                    <h5 class="mb-0 fw-bold">What's For Dinner</h5>
+                    <small>Your daily meal inspiration</small>
+                </div>
+
+            </a>
+
+
+            <!--! Right Icons -->
+
+            <div class="d-flex align-items-center gap-4">
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-bookmark"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+
+                <img src="./images/icon/avatar-4 (1).jpg" alt="Profile" class="profile-img" width="50px">
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!--! ================= MAIN ================= -->
+
+    <main class="main-section">
+
+        <div class="container">
+
+            <div class="recipe-card">
+
+                <div class="row g-0">
+
+
+                    <!--! ================= IMAGE ================= -->
+
+                    <div class="col-lg-5">
+
+                        <div class="image-section">
+
+                            <!-- Recipe Image -->
+                            <img id="recipeImage" src="./images/burger.jpg"
+                            alt="Classic Beef Burger" class="recipe-image">
+                            <!-- Rating -->
+
+                            <div class="rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <strong id="rating">
+                                    4.6
+                                </strong>
+
+                                <span id="reviews">
+                                    (421 reviews)
+                                </span>
+
+                            </div>
+
+                            <!--? Bottom Info -->
+
+                            <div class="recipe-info">
+                                <!-- Prep Time -->
+                                <div class="info-item">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                    <span>
+                                        Prep Time
+                                    </span>
+
+                                    <strong id="prepTime">
+                                        15 min
+                                    </strong>
+
+                                </div>
+
+                                <!-- Cook Time -->
+
+                                <div class="info-item">
+
+                                    <i class="fa-solid fa-fire"></i>
+
+                                    <span>
+                                        Cook Time
+                                    </span>
+
+                                    <strong id="cookTime">
+                                        20 min
+                                    </strong>
+
+                                </div>
+
+                                <!-- Servings -->
+
+                                <div class="info-item">
+
+                                    <i class="fa-solid fa-users"></i>
+
+                                    <span>
+                                        Servings
+                                    </span>
+
+                                    <strong id="servings">
+                                        4 people
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--! ================= CONTENT ================= -->
+
+                    <div class="col-lg-7">
+
+                        <div class="recipe-content">
+
+
+                            <!--? Badges -->
+
+                            <div class="d-flex gap-2 mb-2">
+
+                                <span class="badge easy-badge" id="difficulty">
+                                    Easy
+                                </span>
+
+                                <span class="badge american-badge" id="category">
+                                    American
+                                </span>
+
+                            </div>
+
+
+
+                            <!--? Title -->
+
+                            <div class="d-flex justify-content-between align-items-start">
+
+
+                                <div>
+
+                                    <h1 class="recipe-title" id="recipeTitle">
+                                        Classic Beef Burger
+                                    </h1>
+
+
+                                    <p class="recipe-description" id="recipeDescription">
+                                        Juicy homemade burger with all the fixings
+                                    </p>
+
+                                </div>
+
+                                <!--? Actions -->
+
+                                <div class="d-flex gap-2">
+
+                                    <button class="action-btn">
+
+                                        <i class="fa-solid fa-bookmark"></i>
+
+                                    </button>
+
+
+                                    <button class="action-btn">
+
+                                        <i class="fa-solid fa-share-nodes"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!--! ================= TABS ================= -->
+
+                            <ul class="nav nav-tabs recipe-tabs mt-4" id="recipeTabs" role="tablist">
+                                <!-- Ingredients -->
+
+                                <li class="nav-item" role="presentation">
+
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ingredients"
+                                        type="button">
+
+                                        <i class="fa-solid fa-list-check"></i>
+
+                                        Ingredients
+
+                                    </button>
+
+                                </li>
+
+                                <!-- Instructions -->
+
+                                <li class="nav-item" role="presentation">
+
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#instructions"
+                                        type="button">
+
+                                        <i class="fa-solid fa-book-open"></i>
+
+                                        Instructions
+
+                                    </button>
+
+                                </li>
+
+                                <!-- Nutrition -->
+
+                                <li class="nav-item" role="presentation">
+
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nutrition"
+                                        type="button">
+
+                                        <i class="fa-solid fa-chart-pie"></i>
+
+                                        Nutrition
+
+                                    </button>
+
+                                </li>
+
+
+
+                                <!-- Chef's Tips -->
+
+                                <li class="nav-item" role="presentation">
+
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tips" type="button">
+
+                                        <i class="fa-solid fa-lightbulb"></i>
+
+                                        Chef's Tips
+
+                                    </button>
+
+                                </li>
+
+
+                            </ul>
+
+                            <!--! ================= TAB CONTENT ================= -->
+
+                            <div class="tab-content">
+                                <!--? INGREDIENTS -->
+                                <div class="tab-pane fade show active" id="ingredients">
+
+                                    <div class="ingredients-box" id="ingredientsList">
+
+
+                                        <div class="ingredient">
+
+                                            <span>1</span>
+
+                                            <p>
+                                                500g ground beef (80/20)
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>2</span>
+
+                                            <p>
+                                                4 burger buns
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>3</span>
+
+                                            <p>
+                                                4 slices cheddar cheese
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>4</span>
+
+                                            <p>
+                                                Lettuce leaves
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>5</span>
+
+                                            <p>
+                                                Tomato slices
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>6</span>
+
+                                            <p>
+                                                Red onion, sliced
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>7</span>
+
+                                            <p>
+                                                Pickles
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="ingredient">
+
+                                            <span>8</span>
+
+                                            <p>
+                                                Burger sauce or condiments
+                                            </p>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <!--? INSTRUCTIONS -->
+
+                                <div class="tab-pane fade" id="instructions">
+
+                                    <div class="normal-box ingredients-box">
+
+                                        <h5>Instructions</h5>
+
+                                        <div class="ingredients-box" id="instructionsList">
+
+                                            <div class="ingredient">
+
+                                                <span>1</span>
+
+                                                <p>
+                                                    Soak rice noodles in warm water for 30 minutes.
+                                                    Drain and set aside.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="ingredient">
+
+                                                <span>2</span>
+
+                                                <p>
+                                                    Mix tamarind paste, fish sauce,
+                                                    and palm sugar to make the sauce.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="ingredient">
+
+                                                <span>3</span>
+
+                                                <p>
+                                                    Heat wok over high heat.
+                                                    Scramble eggs and set aside.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="ingredient">
+
+                                                <span>4</span>
+
+                                                <p>
+                                                    Cook shrimp until pink.
+                                                    Add noodles and sauce, toss for 2-3 minutes.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="ingredient">
+
+                                                <span>5</span>
+
+                                                <p>
+                                                    Add scrambled eggs and bean sprouts.
+                                                    Toss everything together.
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="ingredient">
+
+                                                <span>6</span>
+
+                                                <p>
+                                                    Serve topped with crushed peanuts,
+                                                    lime wedges, and cilantro.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!--? NUTRITION -->
+
+                                <div class="tab-pane fade" id="nutrition">
+
+                                    <div class="nutrition-box">
+
+                                        <div class="nutrition-grid">
+
+
+                                            <!-- Calories -->
+
+                                            <div class="nutrition-item">
+
+                                                <div class="nutrition-icon calories-icon">
+
+                                                    <i class="fa-solid fa-fire"></i>
+
+                                                </div>
+
+                                                <span>
+                                                    Calories
+                                                </span>
+
+                                                <strong id="calories">
+                                                    580 kcal
+                                                </strong>
+
+                                            </div>
+
+
+
+                                            <!-- Protein -->
+
+                                            <div class="nutrition-item">
+
+                                                <div class="nutrition-icon protein-icon">
+
+                                                    <i class="fa-solid fa-dumbbell"></i>
+
+                                                </div>
+
+                                                <span>
+                                                    Protein
+                                                </span>
+
+                                                <strong id="protein">
+                                                    24g
+                                                </strong>
+
+                                            </div>
+
+                                            <!-- Carbohydrates -->
+
+                                            <div class="nutrition-item">
+
+                                                <div class="nutrition-icon carbs-icon">
+
+                                                    <i class="fa-solid fa-wheat-awn"></i>
+
+                                                </div>
+
+                                                <span>
+                                                    Carbohydrates
+                                                </span>
+
+                                                <strong id="carbs">
+                                                    68g
+                                                </strong>
+
+                                            </div>
+
+                                            <!-- Fat -->
+
+                                            <div class="nutrition-item">
+
+                                                <div class="nutrition-icon fat-icon">
+
+                                                    <i class="fa-solid fa-droplet"></i>
+
+                                                </div>
+
+                                                <span>
+                                                    Fat
+                                                </span>
+
+                                                <strong id="fat">
+                                                    22g
+                                                </strong>
+
+                                            </div>
+
+                                            <!-- Fiber -->
+
+                                            <div class="nutrition-item">
+
+                                                <div class="nutrition-icon fiber-icon">
+
+                                                    <i class="fa-solid fa-seedling"></i>
+
+                                                </div>
+
+                                                <span>
+                                                    Fiber
+                                                </span>
+
+                                                <strong id="fiber">
+                                                    4g
+                                                </strong>
+
+                                            </div>
+
+                                            <!-- Sodium -->
+
+                                            <div class="nutrition-item">
+
+                                                <div class="nutrition-icon sodium-icon">
+
+                                                    <i class="fa-solid fa-cube"></i>
+
+                                                </div>
+
+                                                <span>
+                                                    Sodium
+                                                </span>
+
+                                                <strong id="sodium">
+                                                    920mg
+                                                </strong>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!--? CHEF'S TIPS -->
+
+                                <div class="tab-pane fade" id="tips">
+
+                                    <div class="normal-box">
+
+                                        <h5>
+                                            Chef's Tips
+                                        </h5>
+
+
+                                        <div class="tips-list" id="tipsList">
+
+                                            <!-- Tip 1 -->
+
+                                            <div class="tip-item">
+
+                                                <div class="tip-icon">
+
+                                                    <i class="fa-solid fa-check"></i>
+
+                                                </div>
+
+                                                <p>
+                                                    Don't press down on burgers while cooking -
+                                                    keeps them juicy
+                                                </p>
+
+                                            </div>
+
+                                            <!-- Tip 2 -->
+
+                                            <div class="tip-item">
+
+                                                <div class="tip-icon">
+
+                                                    <i class="fa-solid fa-check"></i>
+
+                                                </div>
+
+                                                <p>
+                                                    Make indent in center to prevent burger
+                                                    from puffing up
+                                                </p>
+
+                                            </div>
+
+                                            <!-- Tip 3 -->
+
+                                            <div class="tip-item">
+
+                                                <div class="tip-icon">
+
+                                                    <i class="fa-solid fa-check"></i>
+
+                                                </div>
+
+                                                <p>
+                                                    Let patties rest for 2-3 minutes
+                                                    before serving
+                                                </p>
+
+                                            </div>
+
+                                            <!-- Tip 4 -->
+
+                                            <div class="tip-item">
+
+                                                <div class="tip-icon">
+
+                                                    <i class="fa-solid fa-check"></i>
+
+                                                </div>
+
+                                                <p>
+                                                    Toast buns for better texture and flavor
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <!--? Bottom -->
+
+                            <div class="bottom-area">
+
+                                <button class="another-btn" id="anotherRecipeBtn">
+
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                                    Try Another Recipe
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <!--? Bootstrap Js -->
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+    <!--? js -->
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
+
+<!-- <i class="fa-solid fa-triangle-exclamation"></i> -->
